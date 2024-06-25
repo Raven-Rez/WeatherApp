@@ -43,25 +43,43 @@ body{
     border: 0;
 }
 .city-name{
-   
+    margin: 0px;
     font-size: 40px;
 }
 .icon-temp{
     font-size: 30px;
 }
-.upper-template{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
+
 .details{
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.wind-icon{
+.wind-icon,.humidity-icon{
     height: 66px;
     width: 79px;
+}
+
+.column-1, .column-2{
+    display: flex;
+    font-size: 20px;
+    align-items: center;;
+}
+p{
+    margin: 0 0 0 10px;
+}
+
+.weather-icon{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.temperature{
+    margin: 0px;
+}
+
+#weather-place{
+    margin-top: 50px;
 }
