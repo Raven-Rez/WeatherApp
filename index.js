@@ -2,6 +2,7 @@ const btnEl = document.getElementById("search-btn");
 const searchEl = document.getElementById("input-box");
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric";
 const apiKey = "8b1e7daaa6f20479706438d703cb224e" // &appid=;
+const weatherInformation = document.getElementById("weather-information");
 let cityName = "hi";
 btnEl.addEventListener("click", function(){
     cityName = searchEl.value;
@@ -23,6 +24,8 @@ function checkWeather(){
 }
 
 function renderCard(nameOfCity, currentTemperature, currentHumidity, currentWindSpeed, currentWeatherIcon){
+    weatherInformation.textContent = "";
+    
     const weatherPlace = document.createElement('div');
     weatherPlace.id = "weather-place";
 
@@ -103,7 +106,8 @@ function renderCard(nameOfCity, currentTemperature, currentHumidity, currentWind
 
     weatherPlace.append(details);
 
-    const searchBox = document.getElementById("search-box");
-    searchBox.insertAdjacentElement("afterend", weatherPlace);
+    // const searchBox = document.getElementById("search-box");
+    // searchBox.insertAdjacentElement("afterend", weatherPlace);
+    weatherInformation.append(weatherPlace);
 }
 
