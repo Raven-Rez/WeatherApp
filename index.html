@@ -9,7 +9,7 @@
     <title>Weather App</title>
     <link href="styles.css" rel="stylesheet"/>
   </head>
-  <body>
+  <body id="container">
     <div id="header">
         <h1 id="heading">Weather App</h1>
     </div>
@@ -17,33 +17,6 @@
     <div id="search-box">
         <input type="text" id="input-box" placeholder="Enter the name of the city....">
         <button id="search-btn">Search</button>
-    </div>
-
-    <div id="weather-place">
-      <div class="upper-template">
-        <div class="icon-temp">
-          <img src="images/clear.png" alt="" class="weather-icon">
-          <h1 class="temperature">22°C</h1>
-        </div>
-        <h1 class="city-name">Bengaluru</h1>
-      </div>
-      <div class="details">
-        <div class="column-1">
-          <img src="images/humidity.png"  class="humidity-icon">
-          <div>
-            <p class="humidity">50%</p>
-            <p>Humidity</p>
-          </div>
-        </div>
-        <div class="column-2">
-          <img src="images/wind.png"  class="wind-icon">
-          <div>
-            <p class="wind-speed">22 km/h</p>
-            <p>Wind Speed</p>
-          </div>
-        </div>
-
-      </div>
     </div>
     <script src="index.js" type="module"></script>
   </body>
