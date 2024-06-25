@@ -4,16 +4,19 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric";
 const apiKey = "8b1e7daaa6f20479706438d703cb224e" // &appid=;
 const weatherInformation = document.getElementById("weather-information");
 let cityName = "hi";
+
 btnEl.addEventListener("click", function(){
     cityName = searchEl.value;
     checkWeather();
     searchEl.value="";
 });
 
-
-
-let displayCityName = document.querySelector(".city-name") //&q=
-
+searchEl.addEventListener("keypress", function(event){
+    if(event.key == "Enter"){
+        event.preventDefault();
+        btnEl.click();
+    }
+})
 
 function checkWeather(){
     fetch(apiUrl + `&q=${cityName}&appid=${apiKey}`)
@@ -105,9 +108,6 @@ function renderCard(nameOfCity, currentTemperature, currentHumidity, currentWind
     details.append(column2);
 
     weatherPlace.append(details);
-
-    // const searchBox = document.getElementById("search-box");
-    // searchBox.insertAdjacentElement("afterend", weatherPlace);
     weatherInformation.append(weatherPlace);
 }
 
